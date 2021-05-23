@@ -1,3 +1,34 @@
-.App {
-  text-align: center;
+.box{
+margin:auto;
+background-color: lightgrey;
+margin: auto;
+margin-top: 10px;
+padding:20px;
+padding-bottom: 25px;
+border-radius: 15px;
+/* display: flex; 
+justify-content: center; 
+align-items: center; */
+}
+
+.forgotPassword{
+display:flex;
+  padding-top: -20px;
+  padding-right: -20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+
+}
+
+.Heading{
+    margin:15px;
+    padding:10px;
+
+}
+
+.newBox{
+    padding-top:10px;
+    margin-top: 4px;
+    border:1px solid black;
+    border-radius: 4px;
 }
