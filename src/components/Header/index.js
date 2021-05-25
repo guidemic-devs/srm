@@ -28,6 +28,27 @@ const Header = (props) => {
         </NavDropdown> */}
       </Nav>
       <Nav>
+      <li className="nav-item">
+        <NavLink to="/" className="nav-link">Home</NavLink>
+        </li>
+        <li className="nav-item">
+        <NavLink to="/blog" className="nav-link">Blog</NavLink>
+        </li>
+
+        <li className="nav-item">
+        <NavLink to="/refer" className="nav-link">Refer</NavLink>
+        </li>
+      </Nav>
+      <Nav>
+        <li className="nav-item">
+        <NavLink to="/about" className="nav-link">About</NavLink>
+        </li>
+
+        <li className="nav-item">
+        <NavLink to="/contact" className="nav-link">Contact</NavLink>
+        </li>
+      </Nav>
+      <Nav>
         <li className="nav-item">
         <NavLink to="/signin" className="nav-link">Signin</NavLink>
         </li>

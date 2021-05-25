@@ -4,18 +4,18 @@ import Layout from '../../components/Layout'
 
 /**
 * @author
-* @function Home
+* @function Contact
 **/
 
-const Home = (props) => {
+const Contact = (props) => {
   return(
     <Layout>
         <Jumbotron style= {{margin:"5rem", background : "#ffffff"}} className = "text-center">
-            <h1>Welcome to SRM</h1>
+            <h1>Contact of SRM</h1>
         </Jumbotron>
     </Layout>
    )
 
  }
 
-export default Home;
+export default Contact;

@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Layout from "../../components/Layout";
-import {Container, Form, Row, Col, Button} from "react-bootstrap";
+import {Container, NavLink, Form, Row, Col, Button} from "react-bootstrap";
 import Input from '../../components/UI/Input';
+import { useDispatch, useSelector } from 'react-redux';
+import {Redirect, Link} from "react-router-dom";
+import {login} from "../../actions";
+
 import "../../App.css";
 
 /**
@@ -10,6 +14,27 @@ import "../../App.css";
 **/
 
 const Signin = (props) => {
+
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError]= useState('');
+  const auth = useSelector(state => state.auth);
+  const dispatch = useDispatch();
+
+  const userLogin = (e) => {
+    e.preventDefault();
+   const user ={ 
+     email, 
+     password
+    };
+     dispatch(login(user));  
+  }
+
+  if(auth.authenticate) {
+    return <Redirect to ={'/'}/>
+  }
+
   return(
    <Layout>
      <Container><center><h1 className = "Heading">Sign In to SRM</h1></center> 
@@ -17,22 +42,22 @@ const Signin = (props) => {
        <Row className="justify-content-md-center" style={{marginTop:"40px"}}>
          <Col md={{span:4, offset:0}}>
          <div className = "box">
-         <Form>
+         <Form onSubmit = {userLogin}>
          
          <Input 
             label="Email"
             placeholder = "Email"
-            value=""
+            value={email}
             type="email"
-            onChange={()=>{}}
+            onChange={(e)=>setEmail(e.target.value)}
             />
 
 <Input 
             label="Password"
             placeholder = "Password"
-            value=""
+            value={password}
             type="password"
-            onChange={()=>{}}
+            onChange={(e)=>setPassword(e.target.value)}
             />
            <div className="forgotPassword"> <a href="">Forgot Password</a><br></br></div>
            
@@ -45,7 +70,9 @@ const Signin = (props) => {
 <center>
          <br />
        <div className="newBox">
-        <p>New to SRM? <a href="">Create an Account</a></p>
+        <p>New to SRM? <Link to="/signup">
+              Login
+            </Link></p>
       </div>
        </center>
          </Col>
