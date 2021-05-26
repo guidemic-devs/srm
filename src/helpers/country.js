@@ -1,7 +1,5 @@
-import {Form} from "react-bootstrap";
-
 export const countryList = () => {
-    return (<Form.Control as="select">
+    return (<>
     <option>Country</option>
     <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
@@ -247,5 +245,5 @@ export const countryList = () => {
                 <option value="Yemen">Yemen</option>
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>
-  </Form.Control>)
+  </>)
 }

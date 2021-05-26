@@ -1,7 +1,9 @@
-import {Form} from "react-bootstrap";
+import React from 'react';
 
 export const stateList = () => {
-    return ( <Form.Control as="select" defaultValue="Choose...">
+  
+
+    return ( <>
     <option>Select State</option>
     <option value="Andhra Pradesh">Andhra Pradesh</option>
 <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -39,5 +41,5 @@ export const stateList = () => {
 <option value="Uttar Pradesh">Uttar Pradesh</option>
 <option value="Uttarakhand">Uttarakhand</option>
 <option value="West Bengal">West Bengal</option>
-  </Form.Control>)
+  </>)
 }

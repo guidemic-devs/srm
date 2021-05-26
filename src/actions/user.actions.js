@@ -3,13 +3,15 @@ import { userConstants } from "./constants";
 
 export const signup = (user) => {
 
+    console.log(user);
+
     return async(dispatch) => {
 
         dispatch({type:userConstants.USER_REGISTER_REQUEST})
-        const res = await axiosInstance.post('/user/signup', {
+        const res = await axiosInstance.post('/signup', {
             ...user
         }); 
-        console.log(res);
+        
         if(res.status===201){
             const {message} = res.data;
             dispatch({

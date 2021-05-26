@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
 import Layout from "../../components/Layout";
 import {Container, Form, Row, Col, Button} from "react-bootstrap";
 import Input from '../../components/UI/Input';
@@ -20,10 +20,12 @@ const Signup = (props) => {
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [shop, setShop] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [dob, setDob] = useState("");
   const [phone, setPhone] = useState("");
+  const [photo, setPhoto] = useState("");
   const [country, setCountry] = useState("");
   const [address1, setAddress1] = useState("");
   const [address2, setAddress2] = useState("");
@@ -40,7 +42,21 @@ const Signup = (props) => {
     e.preventDefault();
   
     const user = {
-      firstName, lastName, email, password, dob, phone, country, address1, address2, city, cityState, zip
+      username:firstName+" " +lastName, 
+      shopname:shop,
+      email, 
+      password, 
+      dob, 
+      // phone 
+      userphoto:photo,
+      Address:{ 
+        village:address1, 
+        Talluk: address2, 
+        district:city, 
+        state:cityState,
+        pincode:zip,
+        // country
+    },
     }
     dispatch(signup(user));
   
@@ -54,7 +70,9 @@ const Signup = (props) => {
     return <p>Loading...!</p>
   }
 
+
   return(
+
     <div><Layout>
     <Container>
     <center><h1 className = "Heading">Sign Up to SRM</h1></center> 
@@ -82,6 +100,13 @@ const Signup = (props) => {
                     />
                   </Col>
                 </Row>
+                <Input
+                  label="Shop Name"
+                  placeholder="Shop Name"
+                  value={shop}
+                  type="text"
+                  onChange={(e) => setShop(e.target.value)}
+                />
                 <Input
                   label="Email"
                   placeholder="Email"
@@ -114,8 +139,16 @@ const Signup = (props) => {
             type="number"
             onChange={(e)=>setPhone(e.target.value)}
             />
-           <Form.Label></Form.Label> Select Country
+
+<Form.Group>
+    <Form.File value={photo} onChange={(e)=> setPhoto(e.target.value)} id="exampleFormControlFile1" label="Select Photo" />
+  </Form.Group>
+
+           <Form.Label>Select Country</Form.Label> 
+
+           <Form.Control value={country} onChange={(e)=>setCountry(e.target.value)} as="select">
            {countryList()}
+           </Form.Control>
             
 
             <br></br>
@@ -148,7 +181,9 @@ const Signup = (props) => {
 
     <Form.Group as={Col} controlId="formGridState">
       <Form.Label>State</Form.Label>
+      <Form.Control value={cityState} onChange={(e)=>setCityState(e.target.value)} as="select" defaultValue="Choose...">
       {stateList()}
+      </Form.Control>
     </Form.Group>
 
     <Form.Group as={Col} controlId="formGridZip">

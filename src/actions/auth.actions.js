@@ -8,7 +8,7 @@ export const login = (user) => {
     return async(dispatch) => {
 
         dispatch({type:authConstants.LOGIN_REQUEST})
-        const res = await axiosInstance.post('/user/signin', {
+        const res = await axiosInstance.post('/login', {
             ...user
         }); 
 
