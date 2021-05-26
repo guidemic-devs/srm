@@ -34,7 +34,6 @@ const Header = (props) => {
         <li className="nav-item">
         <NavLink to="/blog" className="nav-link">Blog</NavLink>
         </li>
-
         <li className="nav-item">
         <NavLink to="/refer" className="nav-link">Refer</NavLink>
         </li>

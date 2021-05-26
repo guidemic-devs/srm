@@ -1,5 +1,5 @@
 import React from 'react'
-import { Jumbotron } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import Layout from '../../components/Layout'
 
 /**
@@ -10,9 +10,10 @@ import Layout from '../../components/Layout'
 const Refer = (props) => {
   return(
     <Layout>
-        <Jumbotron style= {{margin:"5rem", background : "#ffffff"}} className = "text-center">
-            <h1>Welcome to Refer and Earn SRM</h1>
-        </Jumbotron>
+                  <Container><center><h1 className = "Heading">Welcome to Refer and Earn SRM</h1></center> 
+
+            
+        </Container>
     </Layout>
    )
 

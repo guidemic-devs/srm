@@ -1,5 +1,5 @@
 import React from 'react'
-import { Jumbotron } from 'react-bootstrap'
+import { Container, Jumbotron } from 'react-bootstrap'
 import Layout from '../../components/Layout'
 
 /**
@@ -10,9 +10,9 @@ import Layout from '../../components/Layout'
 const About = (props) => {
   return(
     <Layout>
-        <Jumbotron style= {{margin:"5rem", background : "#ffffff"}} className = "text-center">
-            <h1>About of SRM</h1>
-        </Jumbotron>
+        <Container><center><h1 className = "Heading">About of SRM</h1></center> </Container>
+            
+       
     </Layout>
    )
 

@@ -1,6 +1,9 @@
-import React from 'react'
-import { Jumbotron } from 'react-bootstrap'
-import Layout from '../../components/Layout'
+import React from 'react';
+import { Jumbotron , CardDeck, Container} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import Layout from '../../components/Layout';
+import Postcard from './postcard';
+
 
 /**
 * @author
@@ -10,9 +13,12 @@ import Layout from '../../components/Layout'
 const Blog = (props) => {
   return(
     <Layout>
-        <Jumbotron style= {{margin:"5rem", background : "#ffffff"}} className = "text-center">
-            <h1>Blog of SRM</h1>
-        </Jumbotron>
+          <Container><center><h1 className = "Heading">Blogs of SRM</h1></center> 
+        
+        <CardDeck> 
+            <Postcard image="image" heading="heading" description="description" author="author" />
+        </CardDeck>
+        </Container>
     </Layout>
    )
 
