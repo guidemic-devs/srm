@@ -9,6 +9,7 @@ import "../../App.css";
 
 const Postcard = (props) => {
   return(
+    <li>
     <Link className="blogLink" to= "/blogpage">
   <div className="postcard">   
   <Card ><div className="postcardImage"> Image
@@ -27,6 +28,7 @@ const Postcard = (props) => {
   
   </div> 
   </Link>
+  </li>
    )
 
  }
