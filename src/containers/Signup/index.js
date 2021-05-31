@@ -25,7 +25,7 @@ const Signup = (props) => {
   const [password, setPassword] = useState("");
   const [dob, setDob] = useState("");
   const [phone, setPhone] = useState("");
-  const [photo, setPhoto] = useState("");
+  const [photo, setPhoto] = useState(null);
   const [country, setCountry] = useState("");
   const [address1, setAddress1] = useState("");
   const [address2, setAddress2] = useState("");
@@ -141,7 +141,7 @@ const Signup = (props) => {
             />
 
 <Form.Group>
-    <Form.File value={photo} onChange={(e)=> setPhoto(e.target.value)} id="exampleFormControlFile1" label="Select Photo" />
+    <Form.File value={photo} onChange={(e)=> setPhoto(e.target.file)} id="exampleFormControlFile1" label="Select Photo" />
   </Form.Group>
 
            <Form.Label>Select Country</Form.Label> 

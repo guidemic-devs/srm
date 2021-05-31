@@ -1,0 +1,13 @@
+.logoNameConatiner{
+    justify-content: space-between;
+}
+
+.logoimg{
+    width:45px;
+    height: 45px;
+}
+
+.name{
+    padding: 8px;
+    display:inline;
+}

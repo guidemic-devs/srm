@@ -30,9 +30,9 @@ function App() {
     <div className="App">
      <Router>
       <Switch>
-        <Route path="/" exact component = {Home} />
-        <Route path="/blog" component = {Blog} />
-        <Route path="/blogpage" component = {BlogPage} />
+        <Route exact path="/" exact component = {Home} />
+        <Route exact path="/blog" component = {Blog} />
+        <Route path="/blog/blogpage" component = {BlogPage} />
         <Route path="/refer" component = {Refer} />
         <Route path="/about" component = {About} />
         <Route path="/contact" component = {Contact} />

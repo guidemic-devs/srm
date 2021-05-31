@@ -9,13 +9,23 @@ import "../../App.css";
  **/
 
 const BlogPage = (props) => {
+
+  // const blog = useSelector(state => state.blog);
+
+  const blog = {
+    heading: " Blog Page Big Heading",
+    author: "By Author",
+    overview: "",
+    content: "",
+  }
+
   return (
     <Layout>
                 <Container>
 
         <div className="blogContainer">
-          <h1 className="blogHeading"> Blog Page Big Heading</h1>
-          <h5 className="blogAuthor"> By Author</h5>
+          <h1 className="blogHeading">{blog.heading}</h1>
+          <h5 className="blogAuthor">{blog.author} </h5>
           <p className="blogOverview">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -49,22 +59,14 @@ const BlogPage = (props) => {
             accompanied by English versions from the 1914 translation by H.
             Rackham.
           </p>
-          <h5 className="blogFinisher">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum."
-          </h5><br />
+         <br />
           <h6> Share this on Social Handle</h6>
           <div className = "socialLinks">
-          <a href="#" class="fa fa-facebook"></a>&nbsp;&nbsp;&nbsp;
-          <a href="#" class="fa fa-twitter"></a><br/>&nbsp;&nbsp;&nbsp;
-          <a href="#" class="fa fa-instagram"></a><br/>&nbsp;&nbsp;&nbsp;
-          <a href="#" class="fa fa-google"></a><br/>&nbsp;&nbsp;&nbsp;
-          <a href="#" class="fa fa-linkedin"></a><br/>
+          <a href="#" class="fa fa-facebook fa-3x"></a>&nbsp;&nbsp;&nbsp;
+          <a href="#" class="fa fa-twitter fa-3x"></a><br/>&nbsp;&nbsp;&nbsp;
+          <a href="#" class="fa fa-instagram fa-3x"></a><br/>&nbsp;&nbsp;&nbsp;
+          <a href="#" class="fa fa-google fa-3x"></a><br/>&nbsp;&nbsp;&nbsp;
+          <a href="#" class="fa fa-linkedin fa-3x"></a><br/>
           </div>
         </div>
       </Container>
