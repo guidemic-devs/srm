@@ -1,0 +1,22 @@
+.searchbox{
+    background-color: #fff;
+    display:flex;
+    flex-direction: row;
+    flex:1;
+    
+}
+.searchButton:hover{
+    background-color: rgb(160, 159, 185);
+    
+}
+.searchButton {
+    height:32px;
+    outline: none;
+    border:none;
+    background: none;
+    border-bottom: 1px solid rgb(176, 190, 230);
+    border-right: 1px solid rgb(176, 190, 230);
+}
+.searchbox img{
+    margin-left:0px;
+}

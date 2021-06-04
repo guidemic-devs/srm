@@ -74,8 +74,9 @@ const Signup = (props) => {
   return(
 
     <div><Layout>
+    <center><h1 className = "Heading">Sign Up to SMR</h1></center> 
+
     <Container>
-    <center><h1 className = "Heading">Sign Up to SRM</h1></center> 
       <Row style={{marginTop:"40px"}}>
         <Col md={{span:6, offset:3}}>
         <div className = "box">

@@ -2,7 +2,6 @@ import React from 'react'
 import {Navbar, Nav, Container} from "react-bootstrap";
 import {NavLink, Link} from "react-router-dom";
 import Logo from '../Logo';
-import logoimg from "../../assets/logo.png"
 
 /**
 * @author
@@ -15,7 +14,7 @@ const Header = (props) => {
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
           <Link to="/" className="navbar-brand">
-            <Logo shopName="SRM" logo={logoimg} />
+            <Logo shopName={props.shopName} logo={props.shopLogo} />
           </Link>
     {/* <Navbar.Brand href="#home">Admin Dashboard</Navbar.Brand> */}
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -39,7 +38,7 @@ const Header = (props) => {
         <NavLink to="/blog" className="nav-link">Blog</NavLink>
         </li>
         <li className="nav-item">
-        <NavLink to="/refer" className="nav-link">Refer</NavLink>
+        <NavLink to="/profile" className="nav-link">Profile</NavLink>
         </li>
       </Nav>
       <Nav>

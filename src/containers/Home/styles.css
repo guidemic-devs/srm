@@ -1,0 +1,19 @@
+.line1{
+    height:15px;
+    width:1000px;
+    background-color: rgb(238, 97, 32);
+    border-radius: 6%;
+    margin:auto;
+    position: absolute;
+    bottom:250px;
+}
+
+.line2{
+    height:15px;
+    width:1000px;
+    background-color: rgb(6, 245, 77);
+    border-radius: 6%;
+    margin:auto;
+    position: absolute;
+    bottom:-100px;
+}

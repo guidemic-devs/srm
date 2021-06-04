@@ -1,5 +1,8 @@
 import React from 'react'
+import Footer from '../Footer';
 import Header from "../Header";
+import logoimg from "../../assets/logo.png"
+
 /**
 * @author
 * @function Layout
@@ -8,9 +11,12 @@ import Header from "../Header";
 const Layout = (props) => {
   return(
 <>
-<Header />
+<Header 
+shopName ="SMR"
+shopLogo ={logoimg}
+/>
 {props.children}
-
+<Footer />
 
 </>
    )

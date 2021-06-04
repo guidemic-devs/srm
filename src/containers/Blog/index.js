@@ -16,6 +16,7 @@ import blog1 from "../../assets/blog1.jpg";
 import blog2 from "../../assets/blog2.jpg";
 import blog3 from "../../assets/blog3.jpg";
 import Input from "../../components/UI/Input";
+import SearchBox from "../../components/SearchBox";
 
 
 /**
@@ -107,27 +108,20 @@ const Blog = (props) => {
 
   return (
     <Layout>
-      <Container>
-        <Row>
-          <Col md={12}>
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <h3>Blogs of SRM</h3>
-
-              {/* {values.map((v, idx) => (
-                <Button
-                  key={idx}
-                  className="me-2"
-                  onClick={() => handleShow(v)}
-                >
-                  Add Blog
-                  {typeof v === "string" && `below ${v.split("-")[0]}`}
-                </Button>
-              ))} */}
-              <Button className="addButton" variant="secondary" onClick={handleShow}>Add blog</Button>
-            </div>
+      
+        <Row style ={{margin:"15px", display: "flex", justifyContent: "space-between" }}>
+          <Col md={4}>
+           <center> <h3 className="Heading">Blogs of SMR</h3></center>
           </Col>
+          <Col md={4}>
+            <SearchBox />
+            </Col>
+          <Col md={4}>
+            <Button className="HeadButton" variant="secondary" onClick={handleShow}>Add blog</Button>
+            </Col>
         </Row>
-
+        <br/>
+        <Container>
         <CardDeck>
           {" "}
           <ul className="blogLists">{renderBlogs(blogList.blogs)}</ul>

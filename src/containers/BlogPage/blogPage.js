@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Jumbotron } from "react-bootstrap";
 import Layout from "../../components/Layout";
 import "../../App.css";
+import SearchBox from "../../components/SearchBox";
 
 /**
  * @author
@@ -21,7 +22,8 @@ const BlogPage = (props) => {
 
   return (
     <Layout>
-                <Container>
+                <Container style={{backgroundColor:"white"}}>
+                  <SearchBox style={{ margin:"15px"}}/>
 
         <div className="blogContainer">
           <h1 className="blogHeading">{blog.heading}</h1>
@@ -61,7 +63,7 @@ const BlogPage = (props) => {
           </p>
          <br />
           <h6> Share this on Social Handle</h6>
-          <div className = "socialLinks">
+          <div className = "socialLinksBlogPage">
           <a href="#" class="fa fa-facebook fa-3x"></a>&nbsp;&nbsp;&nbsp;
           <a href="#" class="fa fa-twitter fa-3x"></a><br/>&nbsp;&nbsp;&nbsp;
           <a href="#" class="fa fa-instagram fa-3x"></a><br/>&nbsp;&nbsp;&nbsp;

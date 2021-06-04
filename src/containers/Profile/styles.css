@@ -1,0 +1,164 @@
+.profileContainer{
+    width:calc(50%-10px);
+    height:100%;
+    padding:5px;
+    margin:4px;
+    background-color: rgb(206, 197, 197); /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, rgb(235, 230, 230), rgb(198, 198, 233));
+  border-radius: 0 0 0 12%;
+  z-index: 1;
+}
+.pictureContainer{
+    height:100px;
+    width:100px;
+    margin:auto;
+    margin-top:40px;
+    border-radius: 100%;
+    border:1px solid rgb(100, 102, 124);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.logoContainer{
+    height:75px;
+    width:75px;
+    margin:auto;
+    margin-top:65px;
+    border-radius: 100%;
+    border:1px solid rgb(100, 102, 124);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.pictureContainer img{
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    object-fit: fill;
+    overflow: hidden;
+    background-size: cover;
+    position: absolute;
+}
+
+.logoContainer img{
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    object-fit: fill;
+    overflow: hidden;
+    background-size: cover;
+    position: absolute;
+}
+
+.Details{
+    margin-left: 0;
+    margin:10px;
+    overflow: hidden;
+}
+
+.border {
+    margin:auto;
+    width:100%;
+    border-collapse: collapse;
+    z-index:10;
+    overflow: hidden;
+}
+
+.data{
+    width:100%;
+}
+
+.border td {
+    border: none;
+    max-width:100%;
+    white-space:nowrap;
+}
+
+
+.values{
+    padding-bottom: 25px;
+    color:rgb(0, 110, 255);
+    font-size: 13px;
+    overflow: hidden;
+}
+
+.referearnContainer{
+    width:calc(50%-10px);
+    height:100%;
+    padding:5px;
+    margin:4px;
+    background-color:rgb(206, 197, 197); /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right,rgb(198, 198, 233), rgb(235, 230, 230));
+  border-radius: 0 12% 0 0 ;
+}
+
+.dataContainer{
+    padding:10px;
+    overflow: hidden;
+}
+
+.dataContainer h4 h5{
+    margin:auto;
+}
+
+.referralCodeContainer{
+    margin:10px;
+    padding:12px;
+}
+
+.socialMediaLinks{
+    display: flex;
+    margin-top: 15px;
+    margin:4px;
+}
+.socialMediaLinks a{
+    margin:auto;
+    text-decoration:none;
+    overflow:hidden;
+}
+@media (max-width: 1200px){
+    .socialMediaLinks a{
+    font-size: 42px;
+}
+}
+@media (max-width: 1024px){
+    .socialMediaLinks a{
+    font-size: 42px;
+}
+}
+@media (max-width: 767px){
+    .socialMediaLinks a{
+    font-size: 38px;
+}
+.profileContainer h4 h5 h6 {
+    font-size:44px;
+}
+.border h5 h6 {
+    font-size:44px;
+}
+.gap{
+    width:15px;
+    height:15px;
+}
+}
+@media (max-width: 380px){
+    .socialMediaLinks a{
+    font-size: 22px;
+}
+.pesonalDetails h4 {
+    font-size:16px;
+}
+.border td>h6 {
+    font-size:11px;
+}
+.border td>span {
+    font-size:11px;
+}
+}

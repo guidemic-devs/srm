@@ -37,7 +37,8 @@ const Signin = (props) => {
 
   return(
    <Layout>
-     <Container><center><h1 className = "Heading">Sign In to SRM</h1></center> 
+     <center><h1 className = "Heading">Sign In to SRM</h1></center>
+     <Container> 
      
        <Row className="justify-content-md-center" style={{marginTop:"40px"}}>
          <Col md={{span:4, offset:0}}>
@@ -70,8 +71,8 @@ const Signin = (props) => {
 <center>
          <br />
        <div className="newBox">
-        <p>New to SRM? <Link to="/signup">
-              Login
+        <p>New to SMR? <Link to="/signup">
+              Signup
             </Link></p>
       </div>
        </center>
