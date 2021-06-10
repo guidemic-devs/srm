@@ -1,0 +1,67 @@
+.aboutData{
+    position: relative;
+    display: block;
+    margin:auto;
+    padding:10px;
+
+}
+
+.mapContainer{
+    height:400px;
+    width:450px;
+    border:1px solid rgb(160, 160, 185);
+    position: relative;
+    margin:auto;
+}
+
+  
+.parentRow{
+    min-height:400px;
+    background-color: rgb(198, 198, 216);
+  background-image: linear-gradient(to bottom right, rgb(235, 230, 230), rgb(198, 198, 233));
+  padding:10px;
+  margin:20px;
+  border-radius: 0 0 12% 0;
+
+
+}
+
+.contactForm{
+    height:400px;
+    width:450px;
+    border:1px solid rgb(160, 160, 185);
+    padding:8px;
+    position: relative;
+    margin:auto;
+    background-color: white;
+}
+
+.contactData{
+    display: block;
+    margin:auto;
+    padding:10px;
+}
+
+
+@media only screen and (max-width:380px) {
+    .mapContainer{
+        max-height:250px;
+        max-width:250px;
+    }
+    .contactForm{
+            height:250px;
+            width:250px;
+        }
+    }
+
+
+  @media only screen and (max-width: 600px) {
+    .mapContainer{
+        height:305px;
+        width:305px;
+    }
+    .contactForm{
+        height:305px;
+        width:305px;
+    }
+  }

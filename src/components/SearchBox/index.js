@@ -10,6 +10,7 @@ import "./style.css";
 
 const SearchBox = (props) => {
   return(
+    <center>
     <div><Col>
             <div className="searchbox">
               <center>
@@ -21,6 +22,7 @@ const SearchBox = (props) => {
             </div>
           </Col>
     </div>
+    </center>
    )
 
  }

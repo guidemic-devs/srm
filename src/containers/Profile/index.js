@@ -3,7 +3,7 @@ import { Col, Container, Row, Button, Modal } from "react-bootstrap";
 import Layout from "../../components/Layout";
 import "./styles.css";
 import profilePhoto from "../../assets/Photo.jpg";
-import logoImg from "../../assets/logo.png";
+import lcssLogo from "../../assets/LCSS.png";
 import SearchBox from "../../components/SearchBox";
 
 
@@ -104,31 +104,31 @@ const Profile = (props) => {
                 <Row>
                 <Col md={8}>
                 <div className="Details">
-                  <h4>Business Details:</h4>
+                  <h4>Profile Analytics:</h4>
 
                   <table className="border">
                     <tr>
                       <td>
-                        <h6>Shop Name:</h6>
+                        <h6>Total Likes Counts:</h6>
                       </td>
                       <td className="data">
-                        <span className="values">myBigShopName </span>
+                        <span className="values">123 </span>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <h6>GST Number:</h6>
+                        <h6>Total Comments Counts:</h6>
                       </td>
                       <td className="data">
-                        <span className="values">1234567890IN</span>
+                        <span className="values">12</span>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <h6>Location:</h6>
+                        <h6>Total Shares Counts:</h6>
                       </td>
                       <td className="data">
-                        <span className="values">cityLocationBigName</span>
+                        <span className="values">4</span>
                       </td>
                     </tr>
                     <tr>
@@ -137,7 +137,7 @@ const Profile = (props) => {
                       </td>
                       <td className="data">
                         <span className="values">
-                          Gold or Diamond or Platinum
+                          None or Gold or Diamond or Platinum
                         </span>
                       </td>
                     </tr>
@@ -146,10 +146,8 @@ const Profile = (props) => {
                 </Col>
                 
                 <Col md={4}>
-                  <div className="logoContainer">
-                    <a href="#" className="logoLink">
-                      <img src={logoImg}></img>
-                    </a>
+                <div className="logoContainer">
+                      <img src={lcssLogo} alt="logo" />
                   </div>
                 </Col>
                 </Row>

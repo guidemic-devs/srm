@@ -121,12 +121,11 @@ const Blog = (props) => {
             </Col>
         </Row>
         <br/>
-        <Container>
-        <CardDeck>
-          {" "}
+        <br/>
+        <CardDeck >
           <ul className="blogLists">{renderBlogs(blogList.blogs)}</ul>
         </CardDeck>
-      </Container>
+
 
       <Modal
         dialogClassName="addModal"

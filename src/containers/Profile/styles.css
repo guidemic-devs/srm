@@ -162,3 +162,15 @@
     font-size:11px;
 }
 }
+.iconContainer{
+
+    position: relative;
+    left:80px;
+    margin-top: 40px;
+}
+.iconContainer img{
+
+    height:28px;
+    width:28px;
+    margin:1px;
+}

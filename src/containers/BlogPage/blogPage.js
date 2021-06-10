@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Jumbotron } from "react-bootstrap";
 import Layout from "../../components/Layout";
 import "../../App.css";
+import "./styles.css";
 import SearchBox from "../../components/SearchBox";
 
 /**
