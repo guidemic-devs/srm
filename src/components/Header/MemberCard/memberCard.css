@@ -1,0 +1,55 @@
+.cardOuter{
+    height:280px;
+    width:300px;
+    border:1px groove rgb(128, 128, 145);
+    border-radius: 2%;
+    background-color: rgb(156, 174, 206);
+    margin:auto;
+    margin-bottom: 10px;
+    z-index: 10;
+}
+.cardInner{
+    height:270px;
+    width:290px;
+    border: 1px solid rgb(219, 197, 157);
+    z-index: 11;
+    margin:5px;
+
+}
+
+.cardUpper{
+    height: 130px;
+    width:100%;
+    background-color: rgb(219, 197, 157);
+    border: 1px solid rgb(219, 197, 157);
+}
+
+.memberLogoContainer{
+    margin:auto;
+    margin-top: 30px;
+    height:85px;
+    width:85px;
+    border-radius: 100%;
+    border:1px dashed rgb(117, 117, 117);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding:auto;
+}
+
+.memberLogoContainer img {
+    margin:auto;
+}
+
+
+.midLine{
+    width:calc(100%- 10px);
+    margin:auto;
+    border-bottom: 9px solid white;
+}
+
+.membershipDetails{
+    background-color: rgb(145, 206, 145);
+    height:130px;
+    padding:25px;
+}

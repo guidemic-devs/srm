@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./containers/Home";
 
 import Blog from "./containers/Blog";
-import Contact from "./containers/Contact";
+import Member from "./containers/Member";
 import About from "./containers/About";
 import Signin from "./containers/Signin";
 import Signup from "./containers/Signup";
@@ -35,7 +35,7 @@ function App() {
         <Route path="/blog/blogpage" component = {BlogPage} />
         <Route path="/profile" component = {Profile} />
         <Route path="/about" component = {About} />
-        <Route path="/contact" component = {Contact} />
+        <Route path="/member" component = {Member} />
         <Route path="/signin"  component = {Signin} />
         <Route path="/signup" component = {Signup} />
       </Switch>
