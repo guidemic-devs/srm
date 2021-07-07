@@ -3,3 +3,74 @@
     justify-content: space-between;
 }
 
+.LikeCommentButtonBox{
+    justify-content: space-between;
+}
+
+.LikeButton{
+    position:absolute;
+    right:0;
+    color:blue;
+    border:none;
+}
+
+.CommentButton{
+    margin:auto;
+    color:blue;
+    border:none;
+}
+
+.CommentBox{
+    margin:auto;
+    width:100%;
+    justify-content: center;
+    
+}
+
+.commentList {
+    list-style-type: none;
+}
+
+.commentContainer{
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    background-color: rgb(234, 240, 245);
+    border:1px solid rgb(180, 180, 178);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.userImageContainer{
+    height:50px;
+    width:50px;
+    margin:auto;
+    margin-top:25px;
+    border-radius: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.userImageContainer img {
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    object-fit: fill;
+    overflow: hidden;
+    background-size: cover;
+    position: absolute;
+}
+
+.commentContent{
+    display:inline-block;
+    margin :30px auto;
+    padding:auto;
+    text-align: center;
+}

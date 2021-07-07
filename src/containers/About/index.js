@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Col, Container, Jumbotron, Row, Form } from "react-bootstrap";
+import { Button, Col, Modal, Row, Form } from "react-bootstrap";
 import Layout from "../../components/Layout";
 import SearchBox from "../../components/SearchBox";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
@@ -12,11 +12,32 @@ import Input from "../../components/UI/Input";
  * @function About
  **/
 
+ 
+
 const About = (props) => {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
+  const [about, setAbout] = useState("");
+  const [contact, setContact] = useState("");
+
+  const aboutChangeHandler = (e) => {
+    setAbout(e.target.value);
+  }
+  const contactChangeHandler = (e) => {
+    setContact(e.target.value);
+  }
+
+  const [show1, setShow1] = useState(false);
+
+  const handleClose1 = () => setShow1(false);
+  const handleShow1 = () => setShow1(true);
+
+  const [show2, setShow2] = useState(false);
+
+  const handleClose2 = () => setShow2(false);
+  const handleShow2 = () => setShow2(true);
 
 
   return (
@@ -37,7 +58,7 @@ const About = (props) => {
           <SearchBox />
         </Col>
         <Col md={4}>
-          <Button className="HeadButton" variant="secondary" onClick="">
+          <Button className="HeadButton" variant="secondary" onClick={handleShow1}>
             Edit About
           </Button>
         </Col>
@@ -101,7 +122,7 @@ const About = (props) => {
         <Col md={4}>
         </Col>
         <Col md={4}>
-          <Button className="HeadButton" variant="secondary" onClick="">
+          <Button className="HeadButton" variant="secondary" onClick={handleShow2}>
             Edit Contact
           </Button>
         </Col>
@@ -174,6 +195,40 @@ const About = (props) => {
       </Row>
 
       <div></div>
+
+      <Modal show={show1} onHide={handleClose1}>
+          <Modal.Header closeButton>
+            <Modal.Title>Edit About</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Input as="textarea" rows={6} label="About" type="text" value="" onChange={aboutChangeHandler} />
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose1}>
+              Close
+            </Button>
+            <Button variant="primary" onClick={handleClose1}>
+              Save Changes
+            </Button>
+          </Modal.Footer>
+        </Modal>
+
+        <Modal show={show2} onHide={handleClose2}>
+          <Modal.Header closeButton>
+            <Modal.Title>Edit Contact</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Input as="textarea" rows={6} label="Contact" type="text" value="" onChange={contactChangeHandler} />
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose2}>
+              Close
+            </Button>
+            <Button variant="primary" onClick={handleClose2}>
+              Save Changes
+            </Button>
+          </Modal.Footer>
+        </Modal>
     </Layout>
   );
 };

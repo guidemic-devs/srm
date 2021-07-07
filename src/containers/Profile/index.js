@@ -5,6 +5,7 @@ import "./styles.css";
 import profilePhoto from "../../assets/Photo.jpg";
 import lcssLogo from "../../assets/LCSS.png";
 import SearchBox from "../../components/SearchBox";
+import Input from "../../components/UI/Input";
 
 
 /**
@@ -14,9 +15,25 @@ import SearchBox from "../../components/SearchBox";
 
 const Profile = (props) => {
   const [show, setShow] = useState(false);
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const nameChangeHandler = (e) => {
+    setName(e.target.value);
+  }
+
+  const emailChangeHandler = (e) => {
+    setEmail(e.target.value);
+  }
+
+  const numberChangeHandler = (e) => {
+    setNumber(e.target.value);
+  }
+
 
   return (
     <Layout>
@@ -228,9 +245,13 @@ const Profile = (props) => {
 
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+            <Modal.Title>Edit Profile</Modal.Title>
           </Modal.Header>
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+          <Modal.Body>
+            <Input label="Name" type="text" value="" onChange={nameChangeHandler} />
+            <Input label="Email" type="email" value="" onChange={emailChangeHandler}/>
+            <Input label="Number" type="number" value="" onChange={numberChangeHandler}/>
+          </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
               Close

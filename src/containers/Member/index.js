@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap'
-import MemberCard from '../../components/Header/MemberCard'
+import MemberCard from '../../components/MemberCard'
 import Layout from '../../components/Layout'
 import SearchBox from '../../components/SearchBox'
 import basicIco from "../../assets/basic.png"
@@ -12,7 +12,16 @@ import platinumIco from "../../assets/platinum.png"
 * @function Member
 **/
 
+
+
 const Member = (props) => {
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
   return(
     <Layout>
           
@@ -23,7 +32,7 @@ const Member = (props) => {
           </Col>
           <Col md={4}><SearchBox /></Col>
           <Col md={4}>
-          <Button className="HeadButton" variant="secondary" onClick="">Edit Membership</Button>
+          <Button className="HeadButton" variant="secondary" onClick={handleShow}>Edit Membership</Button>
           </Col>
        </Row>
        <br/>

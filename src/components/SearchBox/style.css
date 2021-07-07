@@ -20,3 +20,15 @@
 .searchbox img{
     margin-left:0px;
 }
+
+.voiceIcon{
+    position:absolute;
+    float: left;
+    border:none;
+    
+    
+}
+
+.inputBox{
+    width:185px;
+}

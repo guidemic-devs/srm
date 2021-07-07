@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import searchicon from "../../assets/search.png";
+import Dictaphone from '../Dictaphone';
 import "./style.css";
 
 /**
@@ -9,12 +10,40 @@ import "./style.css";
 **/
 
 const SearchBox = (props) => {
+
+  const [searchText, setSearchText] = useState("");
+  const [voiceText, setVoiceText] = useState(null);
+
+  const searchTextChangeHandler = (e) => {
+    setSearchText(e.target.value)
+  }
+
+  const handleCallback = (childData) =>{
+    const voiceText = null;
+    if(!childData){
+      setVoiceText(false)
+    }
+    setVoiceText(voiceText || childData);
+}
+
+useEffect(()=>{if ("geolocation" in navigator) {
+  console.log("Available");
+} else {
+  console.log("Not Available");
+}} 
+  , [])
+
   return(
     <center>
     <div><Col>
             <div className="searchbox">
               <center>
-            <input type="text" placeholder="Search"/>
+                <div className="inputBox" >
+                  <Row>
+            <input value={""|| searchText ||voiceText } onChange={searchTextChangeHandler} type="text" placeholder="Search"/>
+            <Dictaphone parentCallback = {handleCallback}/>
+            </Row>
+            </div>
             <button className="searchButton">
               <img className="searchIcon" src={searchicon} alt="search" />
             </button>
