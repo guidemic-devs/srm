@@ -2,6 +2,7 @@ import React from 'react'
 import {Navbar, Nav, Container} from "react-bootstrap";
 import {NavLink, Link} from "react-router-dom";
 import Logo from '../Logo';
+import "./style.css";
 
 /**
 * @author
@@ -11,7 +12,7 @@ import Logo from '../Logo';
 const Header = (props) => {
   return(
       
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" className="bg" variant="dark">
         <Container>
           <Link to="/" className="navbar-brand">
             <Logo shopName={props.shopName} logo={props.shopLogo} />

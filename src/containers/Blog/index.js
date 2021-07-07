@@ -17,6 +17,7 @@ import blog2 from "../../assets/blog2.jpg";
 import blog3 from "../../assets/blog3.jpg";
 import Input from "../../components/UI/Input";
 import SearchBox from "../../components/SearchBox";
+import "../../App.css";
 
 
 /**

@@ -3,8 +3,9 @@
     height:100%;
     padding:5px;
     margin:4px;
-    background-color: rgb(206, 197, 197); /* For browsers that do not support gradients */
-  background-image: linear-gradient(to bottom right, rgb(235, 230, 230), rgb(198, 198, 233));
+    margin-left:50px;
+    background-color: #e2f3f5; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, #e2f3f5, #22d1ee);
   border-radius: 0 0 0 12%;
   z-index: 1;
 }
@@ -94,8 +95,9 @@
     height:100%;
     padding:5px;
     margin:4px;
-    background-color:rgb(206, 197, 197); /* For browsers that do not support gradients */
-  background-image: linear-gradient(to bottom right,rgb(198, 198, 233), rgb(235, 230, 230));
+    margin-right: 50px;
+    background-color:#22d1ee; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right,#22d1ee,  #e2f3f5);
   border-radius: 0 12% 0 0 ;
 }
 
@@ -173,4 +175,14 @@
     height:28px;
     width:28px;
     margin:1px;
+}
+
+.horizontalLine{
+    width:calc(100% - 100px);
+    margin:0 50px;
+    border-bottom:5px solid #22d1ee;
+}
+
+.myblogs{
+    text-align: center;
 }

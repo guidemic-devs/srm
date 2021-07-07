@@ -17,8 +17,8 @@
   
 .parentRow{
     min-height:400px;
-    background-color: rgb(198, 198, 216);
-  background-image: linear-gradient(to bottom right, rgb(235, 230, 230), rgb(198, 198, 233));
+    background-color: #e2f3f5;
+  background-image: linear-gradient(to bottom right, #e2f3f5, #22d1ee);
   padding:10px;
   margin:20px;
   border-radius: 0 0 12% 0;

@@ -1,11 +1,17 @@
 import React, { useState } from "react";
-import { Col, Container, Row, Button, Modal } from "react-bootstrap";
+import { Col, Container, Row, Button, Modal, CardDeck } from "react-bootstrap";
 import Layout from "../../components/Layout";
 import "./styles.css";
 import profilePhoto from "../../assets/Photo.jpg";
 import lcssLogo from "../../assets/LCSS.png";
 import SearchBox from "../../components/SearchBox";
 import Input from "../../components/UI/Input";
+import Postcard from "../../components/Postcard/postcard";
+import blog1 from "../../assets/blog1.jpg";
+import blog2 from "../../assets/blog2.jpg";
+import blog3 from "../../assets/blog3.jpg";
+import "../../App.css";
+
 
 
 /**
@@ -34,6 +40,66 @@ const Profile = (props) => {
     setNumber(e.target.value);
   }
 
+  const blogList = {
+    blogs: [
+      {
+        image: blog1,
+        heading: "blog1 heading",
+        overview:
+          "blog overview as little details about blog is mentioned here. as people can judge the content of postcard from above blog overview as little details about blog is mentioned here.",
+        author: " author RO",
+      },
+      {
+        image: blog2,
+        heading: "blog2 heading",
+        overview:
+          "blog overview as little details about blog is mentioned here. as people can judge the content of postcard from above. It size can be long as well as short blog overview as little details about blog is mentioned here. blog overview as little details about blog is mentioned here. blog is mentioned here. as people can judge the content",
+        author: "author RO2",
+      },
+      {
+        image: blog3,
+        heading: "blog3 heading",
+        overview:
+          "blog overview as little details about blog is mentioned here.",
+        author: " author RO3",
+      },
+      {
+        image: blog2,
+        heading: "blog4 heading",
+        overview: "blog overview3",
+        author: " author RO3",
+      },
+      {
+        image: blog3,
+        heading: "blog5 heading",
+        overview: "blog overview3",
+        author: " author RO3",
+      },
+      {
+        image: blog1,
+        heading: "blog6 heading",
+        overview: "blog overview3",
+        author: " author RO3",
+      },
+    ],
+  };
+
+  const renderBlogs = (blogs) => {
+    let myBlogs = [];
+    for (let blog of blogs) {
+      myBlogs.push(
+        <li className="blogListItem">
+          <Postcard
+            image={blog.image}
+            heading={blog.heading}
+            overview={blog.overview}
+            author={blog.author}
+          />
+        </li>
+      );
+    }
+    return myBlogs;
+  };
 
   return (
     <Layout>
@@ -60,7 +126,6 @@ const Profile = (props) => {
               </Row>
               <br/>
               <br/>
-              <Container>
         <Row className="row">
           <Col md={6}>
             <div className="profileContainer">
@@ -231,15 +296,19 @@ const Profile = (props) => {
             </div>
           </Col>
         </Row>
+        <br></br>
+        <br></br>
+        <div className="horizontalLine"></div>
+        <br></br>
+        <div className="myblogs">
+          <h4>My Blogs</h4>
+        </div>
+        <br></br>
         <Row>
           <Col>
-            <center>
-              <div className="blogDetails">
-                <Button style={{ marginTop: "50px" }} href="/blog/user">
-                  My Blogs
-                </Button>
-              </div>
-            </center>
+          <CardDeck >
+          <ul className="blogLists">{renderBlogs(blogList.blogs)}</ul>
+        </CardDeck>
           </Col>
         </Row>
 
@@ -261,7 +330,6 @@ const Profile = (props) => {
             </Button>
           </Modal.Footer>
         </Modal>
-      </Container>
     </Layout>
   );
 };

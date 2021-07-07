@@ -2,7 +2,7 @@
     height:280px;
     width:300px;
     border:1px groove rgb(128, 128, 145);
-    border-radius: 2%;
+    border-radius: 0 25% 0 25%;
     background-color: rgb(156, 174, 206);
     margin:auto;
     margin-bottom: 10px;
@@ -12,6 +12,7 @@
     height:270px;
     width:290px;
     border: 1px solid rgb(219, 197, 157);
+    border-radius: 0 30% 0 30% ;
     z-index: 11;
     margin:5px;
 
@@ -20,8 +21,9 @@
 .cardUpper{
     height: 130px;
     width:100%;
-    background-color: rgb(219, 197, 157);
-    border: 1px solid rgb(219, 197, 157);
+    background-color: #e2f3f5;
+    border: 1px solid #e2f3f5;
+    border-radius: 0 35% 0 0 ;
 }
 
 .memberLogoContainer{
@@ -49,7 +51,8 @@
 }
 
 .membershipDetails{
-    background-color: rgb(145, 206, 145);
+    background-color: #22d1ee;
     height:130px;
     padding:25px;
+    border-radius: 0 0 0 35%;
 }
