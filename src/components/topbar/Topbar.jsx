@@ -10,7 +10,7 @@ const Topbar = (props) => {
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
-        <span className="logo">SRM Social</span>
+        <span className="logo">SMR Social</span>
       </div>
       <div className="topbarCenter">
         <div className="searchBar">
